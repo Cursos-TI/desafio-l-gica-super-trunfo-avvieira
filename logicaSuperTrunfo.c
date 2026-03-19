@@ -314,6 +314,61 @@ int main (){
     }
 
 
+    printf("\n");
+
+
+    int opcao;
+
+    printf("** Dados dos Estados **\n");
+    printf("\n");
+    printf("Escolha uma das Opções:\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Ponto Turistico\n");
+    printf("5. Densidade Populacional\n");
+    printf("6. Pib per Capita\n");
+    printf("7. Super Poder\n");
+    scanf("%d", &opcao);
+
+    switch (opcao)
+    {
+    case 1:
+        printf("Deseja Saber sobre a população da Cidade de Natal ou SP?\n");
+        break;
+
+    case 2:
+        printf("A cidade de São Paulo é 3 vezes menos que Belo Horizonte\n");
+        break;
+
+    case 3:
+        printf("A economonia de SP é estavel\n");
+        break;
+
+    case 4:
+        printf("SP em destaque\n");
+        break;
+
+    case 5:
+        printf("Em Sp é muito alto\n");
+        break;
+
+    case 6:
+        printf("devido a movimento migratorio Sp se destaca\n");
+        break;
+
+    case 7:
+        printf("Sp tem maior custo beneficio\n");
+        break;
+    
+    default:
+        printf("valor Invalido\n");
+        break;
+    }
+    
+
+
+
 
     
     
