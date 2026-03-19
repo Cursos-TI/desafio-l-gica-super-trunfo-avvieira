@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-int main (){
+int main (){  
 
     int pop1, pop2, pop3, pop4; // O número de população de cada Cidade A
     int pop1b, pop2b, pop3b, pop4b; // O número de população de cada Cidade B
@@ -364,7 +366,64 @@ int main (){
     default:
         printf("valor Invalido\n");
         break;
+    } 
+
+
+
+    int palpiteTopografia, mapaMercator, resultado;
+    char item;
+
+    // gerar um numero aleatorio
+    srand(time(0));
+    mapaMercator = rand() % 1000 + 1; // entre 1 e 1000
+
+    printf(" ** Desafio do Tamanho Mapa Mundi ** \n");
+    printf("Voçê deve escolher um Item\n");
+    printf("P. População de Brasilia\n");
+    printf("T. Ponto Turisticos de Natal\n");
+    printf("S. Super Poder de Fortaleza\n");
+
+    printf("Escolha um item: ");
+    scanf(" %c", &item);
+
+    printf("Escolha um numero de 1 a 100: ");
+    scanf("%d", &palpiteTopografia);
+
+   
+
+    switch (item)
+    {
+    case 'P':
+    case 'p':
+        printf("Voce escolheu a opção População\n");
+        resultado = palpiteTopografia > mapaMercator ? 1 : 0;
+        break;
+
+    case 'T':
+    case 't':
+        printf("Voce escolheu a opção Ponto Turistico\n");
+        resultado = palpiteTopografia > mapaMercator ? 1 : 0;
+        
+        break;
+
+    case 'S':
+    case 's':
+        printf("Voce escolheu a opção Super Poder\n");
+        resultado = palpiteTopografia > mapaMercator ? 1 : 0;
+    
+    default:
+        printf("Opção Inválida\n");
+        break;
     }
+
+    printf("O numero da palpite é: %d e o numero da Mapa é: %d\n", palpiteTopografia, mapaMercator);
+
+    if (resultado == 1) {
+        printf("Voce Ganhou!\n");
+    } else {
+        printf("Voce Perdeu!\n");
+    }
+
     
 
 
